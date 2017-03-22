@@ -2,7 +2,7 @@
 
 # Open README file for descriptions and help.
 
-$ftpHost = "127.0.0.1";
+$ftpHost = "localhost";
 $ftpPort = "21";
 $ftpMode = "1";
 $ftpSSL  = "0";
