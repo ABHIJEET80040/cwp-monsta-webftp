@@ -1,13 +1,9 @@
-###################################
-IMPORTANT
-###################################
+Modifed version of opensource Monsta WebFTP for CWP users
+Orginal Monsta WebFTP version: 1.8.8
+CWP Monsta WebFTP version: 1.8.8.1
 
-The server running this script must allow external FTP connections
-if you intend to allow connection to external servers.
-
-###################################
-SUPPORT
-###################################
+Orginal source code:
+https://github.com/MonstaApps/Monsta-FTP
 
 Support Portal:
 http://www.monstaftp.com/support
@@ -25,14 +21,16 @@ Contact us:
 http://www.monstaftp.com/support/contact
 
 ###################################
-INSTALL
+CWP INSTALL
 ###################################
+cd /usr/local/apache/htdocs/
+wget http://github.com/cwpdev/cwp-monsta-webftp/archive/master.zip
+unzip master.zip
+mv webftp_simple webftp_simpleOLD
+mv cwp-monsta-webftp-master webftp_simple
+rm -f master.zip
 
-Unzip the contents of the Monsta FTP install zip to your desktop.
-Then upload the "mftp” folder (and its contents) to your web space.
-You'll then access Monsta FTP in your browser from the URL:
-
-www.yourdomain.com/mftp
+www.yourdomain.com/webftp_simple
 
 ###################################
 CONFIGURATION
@@ -73,9 +71,6 @@ USA date format - 1 for mm/dd/yy, 0 for dd/mm/yy
 $lockOutTime
 The number of minutes to lockout 3 consecutive invalid logins
 
-$versionCheck
-1 to check Monsta FTP server for updates, 0 to not
-
 $showAdvOption
 1 to show advanced interface option at login, 0 to set basic
 
@@ -100,3 +95,10 @@ $maxFileSize
 The maximum size of files that can be uploaded. Measured in megabytes (M).
 (web hosts may implement a maximum limit users can increase this to, in 
 which case it will revert to their limit.)
+
+###################################
+CONFIGURATION
+###################################
+
+If you have some ideas for improvements you can contact us and send your ideas
+http://centos-webpanel.com/contact
